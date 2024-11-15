@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Upload Form</title>
+    
+    <style>
+      *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    background-color:white;
+    background-image: url('https://img.freepik.com/premium-photo/white-background-with-food-greenery-around-border_1174990-15609.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    background-image: url(1000_F_106046348_jg2HtB9Bm5PSBk81a9LdKJdE9n4NUfH4.jpg);
+    background-size: 100% 110%;
+   margin:50px auto;
+}
+form{
+    padding-inline:75px;
+    padding-block: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fffefe;
+    text-shadow: 0px 0px 10px black
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+/* input[type="file"], */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #b4b1b1;
+    border-radius: 4px;
+    background-color: rgba(242, 242, 242, 0.883);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:green;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+div.upload-img-container{
+    background-color: rgba(242, 242, 242, 0.733);
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    justify-content: center;
+    align-items: center;
+    height:150px;
+    border: 2px solid #b4b1b1;
+    margin-bottom: 20px;
+    & div:nth-of-type(1){
+        height:50px;
+        text-align: center;
+    }
+    h2{
+        text-transform: capitalize;
+        font-size: 1rem;
+        color:blue;
+    }
+}
+input[type="submit"]{
+background-color: green;
+color: white;
+text-transform: capitalize;
+font-size: 1rem;
+padding:10px;
+border: none;
+
+
+}
+input[type="file"]{
+    transform: translateX(2rem);
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Upload Your Recipe</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            <label for="recipe-image">Upload Image:</label>
+            <div class="upload-img-container">
+                 <div><input type="file" name="recipe_image" placeholder="Recipe Image"></div>
+                <h2>click to upload file</h2>
+            </div>
+            <label for="">Resipe name</label>
+                <input type="text" name="recipe_name" placeholder="Recipe Name">
+            <label for="">Description</label>
+                <textarea name="Description" placeholder="Description" rows="5"></textarea>
+                <input type="submit" name="upload" value="Upload Recipe">
+        </form>
+    </div>
+</body>
+
+</html>
